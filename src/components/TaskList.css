@@ -1,0 +1,263 @@
+/* CSS tanpa media queries responsif */
+.task-list {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.task-list h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.add-task-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.add-task-button:hover {
+    background-color: #5a53e2;
+    transform: scale(1.05);
+}
+
+/* Form untuk Menambah Tugas */
+.add-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.add-task-form input, .add-task-form select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.add-task-form input:focus, .add-task-form select:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+.add-task-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-task-form button:hover {
+    background-color: #5a53e2;
+    transform: scale(1.05);
+}
+
+.add-task-form button:nth-child(2) {
+    background-color: #e74c3c;
+}
+
+.add-task-form button:nth-child(2):hover {
+    background-color: #c0392b;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0.25rem;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-item span {
+    flex: 1;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.task-item .completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-item input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.task-item input[type="text"]:focus {
+    border-color: #6c63ff;
+}
+
+.task-item .priority {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    margin-right: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.task-item .priority.high {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.task-item .priority.medium {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.task-item .priority.low {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.task-item .status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #e0e0e0;
+    font-size: 0.875rem;
+    margin-right: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.task-item .edit, .task-item .delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    color: #333;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.task-item .edit:hover {
+    color: #3498db;
+    transform: scale(1.1);
+}
+
+.task-item .delete {
+    color: #e74c3c;
+}
+
+.task-item .delete:hover {
+    color: #c0392b;
+    transform: scale(1.1);
+}
+
+.task-item .task-text {
+    flex: 1;
+}
+
+/* Styling untuk Pesan Error */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.error-message i {
+    font-size: 1.2rem;
+}
+
+/* Bulatan Status */
+.status-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Status 'To Do' - bulatan samar */
+.status-circle.to-do {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Status 'In Progress' - bulatan berputar */
+.status-circle.in-progress {
+    border: 2px solid #3498db;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Status 'Done' - bulatan penuh */
+.status-circle.done {
+    background-color: #2ecc71;
+    width: 15px; /* Ukuran diameter lingkaran */
+    height: 15px;
+    border-radius: 50%; /* Membuatnya menjadi lingkaran */
+    position: relative; /* Dibutuhkan untuk pseudo-element */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tanda centang di tengah */
+.status-circle.done::after {
+    content: '✔'; /* Karakter centang */
+    color: white; /* Warna centang */
+    font-size: 10px; /* Ukuran font centang yang pas */
+    font-weight: bold; /* Tebal agar terlihat jelas */
+    line-height: 1; /* Menjaga posisi centang di tengah */
+}
+
